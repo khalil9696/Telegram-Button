@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Button</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .telegram-button {
+      position: relative;
+      padding: 15px 40px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #0088cc;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .telegram-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, violet);
+      filter: blur(20px);
+      opacity: 0.5;
+      transition: opacity 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    .telegram-button:hover:before {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://t.me/your_channel" class="telegram-button">Join on Telegram</a>
+</body>
+</html>
